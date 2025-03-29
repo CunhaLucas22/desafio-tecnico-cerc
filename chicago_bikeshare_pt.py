@@ -1,4 +1,4 @@
-# coding: utf-8 
+# coding: utf-8
 
 # Começando com os imports
 import csv
@@ -35,6 +35,10 @@ data_list = data_list[1:]
 # Nós podemos acessar as features pelo índice
 # Por exemplo: sample[6] para imprimir gênero, ou sample[-2]
 
+for i in range(20):
+    sample = data_list[i]
+    print(sample)
+
 input("Aperte Enter para continuar...")
 # TAREFA 2
 # TODO: Imprima o `gênero` das primeiras 20 linhas
@@ -52,7 +56,6 @@ def column_to_list(data, index):
     column_list = []
     # Dica: Você pode usar um for para iterar sobre as amostras, pegar a feature pelo seu índice, e dar append para uma lista
     return column_list
-
 
 # Vamos checar com os gêneros se isso está funcionando (apenas para os primeiros 20)
 print("\nTAREFA 3: Imprimindo a lista de gêneros das primeiras 20 amostras")
