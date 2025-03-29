@@ -81,8 +81,7 @@ male = 0
 female = 0
 
 for index_row, row in enumerate(data_list):
-    sample = data_list[index_row][6]
-    sample = sample.title()
+    sample = data_list[index_row][6].title()
     if sample == "Male":
         male += 1
     elif sample == "Female":
