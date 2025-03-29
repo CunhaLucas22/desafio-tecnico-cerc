@@ -158,10 +158,33 @@ plt.xticks(y_pos, types)
 plt.title('Quantidade por Gênero')
 plt.show(block=True)
 
+
 input("Aperte Enter para continuar...")
 # TAREFA 7
 # TODO: Crie um gráfico similar para user_types. Tenha certeza que a legenda está correta.
 print("\nTAREFA 7: Verifique o gráfico!")
+user_type_list = column_to_list(data_list, -3)
+types = list(set(user_type_list))
+
+
+def count_user_types(user_type_list, types):
+    dict_user_types = {type: 0 for type in types}
+    for _, row in enumerate(user_type_list):
+        if row in dict_user_types:
+            dict_user_types[row] += 1
+
+    return list(dict_user_types.values())
+
+
+quantity = count_user_types(user_type_list, types)
+
+y_pos = list(range(len(types)))
+plt.bar(y_pos, quantity)
+plt.ylabel("Quantidade")
+plt.xlabel("Tipo Usuario")
+plt.xticks(y_pos, types)
+plt.title("Quantidade por Tipo de Usuarios")
+plt.show(block=True)
 
 
 input("Aperte Enter para continuar...")
