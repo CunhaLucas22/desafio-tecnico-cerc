@@ -285,10 +285,10 @@ print("Você vai encarar o desafio? (yes ou no)")
 answer = "no"
 
 def count_items(column_list):
-    item_types = []
-    count_items = []
-    return item_types, count_items
+    item_types = list(set(column_list))
+    count_items = len(column_list)
 
+    return item_types, count_items
 
 if answer == "yes":
     # ------------ NÃO MUDE NENHUM CÓDIGO AQUI ------------
