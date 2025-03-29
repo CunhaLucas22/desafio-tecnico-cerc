@@ -80,6 +80,13 @@ input("Aperte Enter para continuar...")
 male = 0
 female = 0
 
+for index_row, row in enumerate(data_list):
+    sample = data_list[index_row][6]
+    sample = sample.title()
+    if sample == "Male":
+        male += 1
+    elif sample == "Female":
+        female += 1
 
 # Verificando o resultado
 print("\nTAREFA 4: Imprimindo quantos masculinos e femininos nós encontramos")
