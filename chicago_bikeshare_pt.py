@@ -163,11 +163,18 @@ input("Aperte Enter para continuar...")
 # TAREFA 7
 # TODO: Crie um gráfico similar para user_types. Tenha certeza que a legenda está correta.
 print("\nTAREFA 7: Verifique o gráfico!")
-user_type_list = column_to_list(data_list, -3)
-types = list(set(user_type_list))
 
 
-def count_user_types(user_type_list, types):
+def count_user_types(user_type_list: list, types: list) -> list:
+    """
+    Função para contar os tipos de usuários.
+    Argumentos:
+        user_type_list: Uma lista com os tipos de usuários.
+        types: Uma lista com os tipos de usuários únicos.
+    Retorna:
+        Uma lista com a contagem de cada tipo de usuário.
+    """
+
     dict_user_types = {type: 0 for type in types}
     for _, row in enumerate(user_type_list):
         if row in dict_user_types:
@@ -176,8 +183,9 @@ def count_user_types(user_type_list, types):
     return list(dict_user_types.values())
 
 
+user_type_list = column_to_list(data_list, -3)
+types = list(set(user_type_list))
 quantity = count_user_types(user_type_list, types)
-
 y_pos = list(range(len(types)))
 plt.bar(y_pos, quantity)
 plt.ylabel("Quantidade")
