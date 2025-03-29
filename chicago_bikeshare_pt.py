@@ -194,14 +194,13 @@ plt.xticks(y_pos, types)
 plt.title("Quantidade por Tipo de Usuarios")
 plt.show(block=True)
 
-
 input("Aperte Enter para continuar...")
 # TAREFA 8
 # TODO: Responda a seguinte questão
 male, female = count_gender(data_list)
 print("\nTAREFA 8: Por que a condição a seguir é Falsa?")
 print("male + female == len(data_list):", male + female == len(data_list))
-answer = "Escreva sua resposta aqui."
+answer = "Existem valores diferentes de male e female na base de dados disponibilizada. Exemplo: strings vazias."
 print("resposta:", answer)
 
 # ------------ NÃO MUDE NENHUM CÓDIGO AQUI ------------
@@ -218,6 +217,26 @@ min_trip = 0.
 max_trip = 0.
 mean_trip = 0.
 median_trip = 0.
+
+for i in range(len(trip_duration_list)):
+    trip_duration_list[i] = int(trip_duration_list[i])
+
+min_trip = sorted(trip_duration_list)[0]
+max_trip = sorted(trip_duration_list)[-1]
+mean_trip = round(sum(trip_duration_list) / len(trip_duration_list))
+
+
+def median(trip_duration_list):
+    sorted_list = sorted(trip_duration_list)
+    n = len(sorted_list)
+    mid = n // 2
+
+    if n % 2 == 0:
+        median_trip = (sorted_list[mid - 1] + sorted_list[mid]) / 2
+    else:
+        median_trip = sorted_list[mid]
+
+    return median_trip
 
 
 print("\nTAREFA 9: Imprimindo o mínimo, máximo, média, e mediana")
