@@ -102,6 +102,15 @@ input("Aperte Enter para continuar...")
 def count_gender(data_list):
     male = 0
     female = 0
+
+    for _, row in enumerate(data_list):
+        gender = row[6].title()
+
+        if gender == "Male":
+            male += 1
+        if gender == "Female":
+            female += 1
+
     return [male, female]
 
 
