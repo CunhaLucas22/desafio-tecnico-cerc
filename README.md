@@ -12,13 +12,15 @@ Este repositório contém a solução de um case técnico enviado para avaliaç�
 ## Estrutura do Repositório
 
 ```mermaid
-├── venv/                      # Ambiente virtual
-├── .gitignore                 # Arquivos e pastas ignorados pelo Git   
-├── arquivo_csv.zip            # Arquivo CSV compactado (compactado para inserção no github)
-├── chicago_bikeshare_pt.py    # Script principal utilizado para resolver o case
-├── read_me.txt                # README fornecido pela empresa
-├── README.md                  # README criado para o projeto
-└── requirements.txt           # Dependências do projeto
+graph TD;
+    A[Root] -->|Ambiente Virtual| B[venv/];
+    A --> C[.gitignore - Arquivos ignorados pelo Git];
+    A --> D[arquivo_csv.zip - Arquivo CSV compactado];
+    A --> E[chicago_bikeshare_pt.py - Script principal];
+    A --> F[chigaco/ - Pasta pesada não enviada];
+    A --> G[read_me - README fornecido pela empresa];
+    A --> H[README.md - Meu README explicativo];
+    A --> I[requirements.txt - Dependências do projeto];
 ```
 
 ## Como Executar o Projeto
