@@ -56,6 +56,14 @@ input("Aperte Enter para continuar...")
 # TAREFA 3
 # TODO: Crie uma função para adicionar as colunas(features) de uma lista em outra lista, na mesma ordem
 def column_to_list(data, index):
+    """
+    Função para pegar uma coluna de uma lista e retornar como uma lista.
+    Argumentos:
+        data: Uma lista com os dados.
+        index: O índice da coluna que queremos pegar.
+    Retorna:
+        Uma lista com os dados da coluna.
+    """
     column_list = []
     # Dica: Você pode usar um for para iterar sobre as amostras, pegar a feature pelo seu índice, e dar append para uma lista
     for index_row, _ in enumerate(data):
@@ -100,6 +108,13 @@ input("Aperte Enter para continuar...")
 # TODO: Crie uma função para contar os gêneros. Retorne uma lista.
 # Isso deveria retornar uma lista com [count_male, count_female] (exemplo: [10, 15] significa 10 Masculinos, 15 Femininos)
 def count_gender(data_list):
+    """
+    Função para contar o generos distintos em uma lista.
+    Argumentos:
+        data_list: Uma lista com os dados.
+    Retorna:
+        Uma lista com a contagem de homens e mulheres.
+    """
     male = 0
     female = 0
 
@@ -123,12 +138,20 @@ assert len(count_gender(data_list)) == 2, "TAREFA 5: Tamanho incorreto retornado
 assert count_gender(data_list)[0] == 665437 and count_gender(data_list)[1] == 198247, "TAREFA 5: Resultado incorreto no retorno!"
 # -----------------------------------------------------
 
+
 input("Aperte Enter para continuar...")
 # Agora que nós podemos contar os usuários, qual gênero é mais prevalente?
 # TAREFA 6
 # TODO: Crie uma função que pegue o gênero mais popular, e retorne este gênero como uma string.
 # Esperamos ver "Male", "Female", ou "Equal" como resposta.
-def most_popular_gender(data_list):
+def most_popular_gender(data_list: list) -> str:
+    """
+    Função para determinar o gênero mais popular.
+    Argumentos:
+        data_list: Uma lista com os dados.
+    Retorna:
+        Uma string com o gênero mais popular, ou "Equal" se eles forem iguais.
+    """
 
     list_count_gender = count_gender(data_list)
     if list_count_gender[0] > list_count_gender[1]:
@@ -226,7 +249,14 @@ max_trip = sorted(trip_duration_list)[-1]
 mean_trip = round(sum(trip_duration_list) / len(trip_duration_list))
 
 
-def median(trip_duration_list):
+def median(trip_duration_list: list) -> float:
+    """
+    Função para calcular a mediana de uma lista.
+    Argumentos:
+        trip_duration_list: Uma lista com os dados.
+    Retorna:
+        A mediana da lista.
+    """
     sorted_list = sorted(trip_duration_list)
     n = len(sorted_list)
     mid = n // 2
@@ -237,6 +267,9 @@ def median(trip_duration_list):
         median_trip = sorted_list[mid]
 
     return median_trip
+
+
+median_trip = median(trip_duration_list)
 
 
 print("\nTAREFA 9: Imprimindo o mínimo, máximo, média, e mediana")
@@ -285,6 +318,13 @@ print("Você vai encarar o desafio? (yes ou no)")
 answer = "no"
 
 def count_items(column_list):
+    """
+    Função para contar os tipos de itens em uma lista.
+    Argumentos:
+        column_list: Uma lista com os dados.
+    Retorna:
+        Uma lista com os tipos de itens únicos e a contagem total.
+    """
     item_types = list(set(column_list))
     count_items = len(column_list)
 
