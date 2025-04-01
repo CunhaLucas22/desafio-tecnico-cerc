@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este repositório contém a solução de um case técnico enviado para avaliação do processo seletivo para a vaga de Engenheiro de Dados. O objetivo foi resolver o desafio proposto e apresentar os afim de medir o conhecimento dentro do contexto de engenharia de dados. Neste repositório encontraremso tambem uma proposta de Arquitetura de um Data Lake.
+Este repositório contém a solução de um case técnico enviado para avaliação do processo seletivo para a vaga de Engenheiro de Dados. O objetivo foi resolver o desafio proposto e apresentar afim de medir o conhecimento dentro do contexto de engenharia de dados. Neste repositório encontraremos também uma proposta de Arquitetura de um Data Lake.
 
 ## Tecnologias Utilizadas
 
